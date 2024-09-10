@@ -47,13 +47,6 @@ function atualizaLinha (){
     table.innerHTML = linhas;
 }
 
-function mediaFinal (){
-    const final = mediaCalcula();
-    
-    document.getElementById('valorFinal').innerHTML = final.toFixed(2);
-    document.getElementById('resultadoFinal').innerHTML = final >= notaMinima ? spanAprovado : spanReprovado;
-}
-
 function mediaCalcula () {
     let somaNotas = 0
 
@@ -64,3 +57,9 @@ function mediaCalcula () {
     return somaNotas / notas.length;
 }
 
+function mediaFinal (){
+    const final = mediaCalcula();
+    
+    document.getElementById('valorFinal').innerHTML = final.toFixed(2);
+    document.getElementById('resultadoFinal').innerHTML = final >= notaMinima ? spanAprovado : spanReprovado;
+}
